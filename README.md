@@ -85,21 +85,64 @@ In the second chapter of *Data Feminism*, Klein and D'Ignazio describe 4 ways th
 
 ### Critical Analysis & Reflection: Before You Code (questions above)
 
-* **(R1a)** ... (about 25-50 words)
-* **(R1b)** ... (about 25-50 words)
-* **(R1c)** ... (about 25-50 words)
-* **(R1d)** ... (about 25-50 words)
-* **(R1e)** ... (about 25-50 words)
-* **(R1f)** ... (about 25-50 words)
-* **(R1g)** ... (bullet points fine; about 50 words)
-* **(R1h)** ... (bullet points fine; about 50 words)
+* **(R1a)**
+
+Because creators want to keep a factual record of ongoing demonstrations, including the exactly where and when protests took place and how many people participated, and making this data more accessible helps citizens, journalists, and politicians make more compelling cases for a diverse, empathetic, and kind country.
+
+* **(R1b)** 
+
+The main point of this article is to illustrate the growing influence of protests against discrimination against blacks in the United States.
+
+* **(R1c)** 
+
+Tommy Leung and Nathan Perkins, engineers and scientists with a keen interest in civic responsibility and public policy.
+
+* **(R1d)** 
+
+Countlove counts public displays of protest that are not part of “regular business” as "what gets counted counts", excluding awareness events, commemorative celebrations, historic reenactments, fundraising events, townhalls, or political campaign rallies.
+
+* **(R1e)** 
+
+They crawl local newspaper and television sites on a daily basis, and most of their protest data come from these crawls.
+
+* **(R1f)** 
+
+Countlove records the most conservative attendance number from the news articles that they link. They interpret “a dozen” as 10, “dozens” as 20, “hundreds” as 100, and so forth. This method of estimation might be lack of precision since converting qualitative terms to numerical estimates may not accurately represent the actual crowd size. For instance, "a dozen" could mean anywhere from 10 to 20, and "hundreds" could range from 100 to 999 which is kind of unclear.
+
+* **(R1g)** 
+
+Justice - Most protests are based on social injustices (such as racial discrimination).
+Dignity - The main reason for the protests is to preserve the dignity of different groups of people.
+
+* **(R1h)** 
+
+Direct stakeholder: Journalists, media that uses the data shared by Countlove to show what they want and rise public awareness.
+Indirect stakeholder: Readers of the newspaper and journals which use the data from Countlove. They didn't have direct access to Countlove's data, but they learned about it in another way.
 
 ### Part 3: Locations (`analysis.R`)
-* **(R3a)** ... (about 25-50 words)
-* **(R3b)** ... (about 25-50 words)
-* **(R3c)** ... (about 25-50 words)
+* **(R3a)** 
+
+To be honest, I'm not very surprised by the number of protests in Washington. Since Washington is a highly populous and politically active region, it's not surprising to have a significant number of protests over these years.
+
+* **(R3b)** 
+
+I would say, applying sapply function amazes me a lot. It is a powerful and efficient technique in performing the same operation on each element of the vector. I hope I can apply it more in the future.
+
+* **(R3c)** 
+
+I noticed that some of the state spellings are case sensitive, such as "te" or "wA." These are most likely input errors that occurred while collecting the data, and should be considered to merge them with the intended content if there is an opportunity to improve them.
 
 ### Critical Analysis & Reflection: After You Code (questions above)
-* **(R7h)** ... (100 words or more)
-* **(R7i)** ... (50 words or more)
-* **(R7j)** ... (50 words or more)
+* **(R7h)** 
+
+The CountLove project mostly embodies "collect" and "teach" as a form of challenging power. Since there are many protests happened around every day, it’s easy to lose track of exactly where and when protests took place and how many people participated due to institutional neglect and practical difficulties. This project complies the data aims to keep a factual record of ongoing demonstrations and make this counterdata more accessible to the public. Additionally, Countlove is willing to be a useful source for journalists and concerned citizens, making more compelling cases for a diverse, empathetic, and kind country. It hopes to draw more attention to these protests and empower the field to change demographics and make a real difference which shows the power of "teach".
+
+* **(R7i)** 
+
+In this assignment, I had the opportunity to explore and enhance my data sorting skills and learned how to effectively utilize functions as powerful tools in R.  Through practical exercises, I gained valuable insights into the importance of data manipulation and analysis, and how it can lead to meaningful outcomes. Moreover, working with functions in R showcased the efficiency and convenience they bring to data analysis.  Functions allowed me to encapsulate complex operations, making the code more readable and modular.
+
+Overall, this assignment provided a practical foundation in data handling and demonstrated the potential of data as a transformative tool.   As I continue my journey in data analysis and programming, I am excited to apply these newfound skills in various domains.
+
+* **(R7j)**
+
+I wanted to delve deeper into the timing of these protests. I believe that the type of protest often emerges in response to a social event acting as a trigger. It seems plausible to establish a connection between the purpose of the protest and the prevailing circumstances. By identifying common patterns among these activities occurring in diverse regions simultaneously, we may gain valuable insights into the issues that genuinely matter to people.
