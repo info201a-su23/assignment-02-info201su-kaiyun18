@@ -272,6 +272,7 @@ earliest <- min(dates)
 # 4d: What is the length of the time span of the dataset? (Hint: R can do math with
 #    dates pretty well by default!) (Variable: `time_span`)
 (time_span <- difftime(most_recent, earliest, units = "days"))
+(time_span <- most_recent - earliest)
 # 4e: Create a vector of the dates that are in 2020. (Variable: `in_2020`)
 in_2020 <- dates[dates >= "2020-01-01" & dates <= "2020-12-31"]
 # 4f: Create a vector of the dates that are in 2019. (Variable: `in_2019`)
@@ -363,7 +364,6 @@ num_purposes <- length(unique(purpose))
 #    To solve this problem, you might do a web search and/or find an introduction
 #    to regular expressions and R. Take your time. You will likely need to do some
 #    thoughtful trial and error. (Variable: `get_purposes`)
-
 print(purpose)
 get_purposes <- function() {
   regular_pattern <- "\\s*\\([^\\)]+\\)"
@@ -496,16 +496,19 @@ filter_positions <- function(purpose, position_taken = NULL) {
     #then the filtered protests won't need to consider position_taken
     filtered_protests <- protests[high_level_purpose == purpose, ]
   } else {
+    #this is to filter both of the purpose and the tags since the position of tag isn't NULL
     filtered_protests <- protests[high_level_purpose == purpose & str_detect(protests$Tags, position_taken) == TRUE, ]
   }
-  df <- data.frame(filtered_protests)
-  return (df)
+  #to form a data frame of the filtered protests
+  protest_df <- data.frame(filtered_protests)
+  #return the data frame
+  return (protest_df)
 }
 
 # 6b: Write the filter_and_report() function, as described above. Please comment 
 #    your function. (Variable: `filter_and_report`)
 filter_and_report <- function(purpose, position_taken = NULL) {
-  filtered_protests <- filter_positions(purpose, position_taken)
+  filtered_protests <- data.frame(filter_positions(purpose, position_taken))
   formatted_report <- format_doc(filtered_protests, purpose, position_taken=NULL)
   return(formatted_report)
 }
