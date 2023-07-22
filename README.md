@@ -100,9 +100,8 @@ In the second chapter of *Data Feminism*, Klein and D'Ignazio describe 4 ways th
 * **(R1g)** I would say justice and dignity are two central values of Countlove. Since most protests are based on social injustices (such as racial discrimination) and the main reason for the protests is to preserve the dignity of different groups of people, collecting data about them reflect the pursuit of social justice and the desire to give dignity to the masses.
 
 * **(R1h)**
-
-Direct stakeholder: Journalists, media that uses the data shared by Countlove to show what they want and rise public awareness.
-Indirect stakeholder: Readers of the newspaper and journals which use the data from Countlove. They didn't have direct access to Countlove's data, but they learned about it in another way.
+   * Direct stakeholder: Journalists and media outlets utilize the data shared by Countlove to present their desired narratives and foster public awareness.
+   * Indirect stakeholder: Readers of the newspaper and journals learned about Countlove's data indirectly, as they did not have direct access to it but were informed through alternative means.
 
 ### Part 3: Locations (`analysis.R`)
 * **(R3a)** To be honest, I'm not very surprised by the number of protests in Washington. Since Washington is a highly populous and politically active region, it's not surprising to have a significant number of protests over these years.
@@ -116,6 +115,6 @@ Indirect stakeholder: Readers of the newspaper and journals which use the data f
 
 * **(R7i)** In this assignment, I had the opportunity to explore and enhance my data sorting skills and learned how to effectively utilize functions as powerful tools in R.  Through practical exercises, I gained valuable insights into the importance of data manipulation and analysis, and how it can lead to meaningful outcomes. Moreover, working with functions in R showcased the efficiency and convenience they bring to data analysis.  Functions allowed me to encapsulate complex operations, making the code more readable and modular.
 
-Overall, this assignment provided a practical foundation in data handling and demonstrated the potential of data as a transformative tool.   As I continue my journey in data analysis and programming, I am excited to apply these newfound skills in various domains.
+   Overall, this assignment provided a practical foundation in data handling and demonstrated the potential of data as a transformative tool. As I continue my journey in data analysis and programming, I am excited to apply these newfound skills in various domains.
 
 * **(R7j)** I wanted to delve deeper into the timing of these protests. I believe that the type of protest often emerges in response to a social event acting as a trigger. It seems plausible to establish a connection between the purpose of the protest and the prevailing circumstances. By identifying common patterns among these activities occurring in diverse regions simultaneously, we may gain valuable insights into the issues that genuinely matter to people.

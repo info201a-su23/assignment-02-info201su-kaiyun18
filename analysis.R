@@ -127,19 +127,19 @@ practice.begin("A2", learner="Kaiyun Zheng", email="kaiyun04@uw.edu")
 # 1a: Load the `stringr` package, which you will use later.
 library(stringr)
 # 1b: Load the data from https://countlove.org/data/data.csv (Variable: `protests`)
-protests <- read.csv("protests.csv")
+protests <- read.csv("https://countlove.org/data/data.csv")
 
 #                                         Note 04.
 #     *BEST PRACTICE:* Use View() to open and examine the dataset. Some key questions to ask:  
 #        1. What information is available? 
 #        2. Are there missing values (NA, which means "Not Available.") or odd values? 
 #        3. What are the column names (sometimes called variables or features)?
-
+View(protests)
 # 1c: Use an R function to determine how many protests are in the dataset? (Variable: `num_protests`)
 num_protests <- nrow(protests)
 # 1d: Use an R function to determine how many how many values (also known as
 #    attributes or features) have been recorded for each protest (Variable: `num_features`)
-
+num_features <- ncol(protests)
 #                                         Note 05.
 ## Part 2: Attendees ----
 # In this part, you will explore the number of people who participated
@@ -273,9 +273,9 @@ earliest <- min(dates)
 #    dates pretty well by default!) (Variable: `time_span`)
 (time_span <- difftime(most_recent, earliest, units = "days"))
 # 4e: Create a vector of the dates that are in 2020. (Variable: `in_2020`)
-in_2020 <- dates[format(dates, "%Y") == "2020"]
+in_2020 <- dates[dates >= "2020-01-01" & dates <= "2020-12-31"]
 # 4f: Create a vector of the dates that are in 2019. (Variable: `in_2019`)
-in_2019 <- dates[format(dates, "%Y") == "2019"]
+in_2019 <- dates[dates >= "2019-01-01" & dates <= "2019-12-31"]
 # 4g: What is the ratio of the number of protests in 2020 compared to 2019? (Variable: `ratio_2020_2019`)
 ratio_2020_2019 <- length(in_2020)/length(in_2019)
 #                                         Note 13.
@@ -287,16 +287,16 @@ ratio_2020_2019 <- length(in_2020)/length(in_2019)
 #       "There were N protests on DATE." - where
 #           N is the number of protests on that date; and
 #           DATE is the date provided. (Variable: `count_on_date`)
-count_one_date <- function(date){
+count_on_date <- function(date){
   N <- sum(str_detect(dates, date))
   sentence <- paste0("There were ", N, " protests on ", date, ".")
 }
 # 4i: Using your function you just wrote, how many protests were there on
 #    May 24th, 2020? (Variable: `num_on_may_24`)
-num_on_may_24 <- count_one_date("2020-05-24")
+num_on_may_24 <- count_on_date("2020-05-24")
 # 4j: Using your function you just wrote, how many protests were there on
 #    May 31th, 2020? (Variable: `num_on_may_31`)
-num_on_may_31 <- count_one_date("2020-05-31")
+num_on_may_31 <- count_on_date("2020-05-31")
 # 4k: How many protests occurred each month in 2020? (Hint: Use the `months()`
 #    function, your `in_2020` dates, and the `table()` function. If you like, you
 #    can do this in multiple steps.) (Variable: `by_month_table`)
@@ -306,8 +306,8 @@ by_month_table <- table(months_in_2020)
 #    What is the *difference* in the number of protests between July 2020 and
 #    July 2019? You'll want to do this in multiple steps as you see fit, though
 #    your answer should be stored in the variable. (Variable: `change_july_protests`)
-july_2019 <- length(dates[format(dates, "%Y-%m") == "2019-07"])
-july_2020 <- length(dates[format(dates, "%Y-%m") == "2020-07"])
+july_2019 <- sum(str_detect(dates, "2019-07"))
+july_2020 <- sum(str_detect(dates, "2020-07"))
 change_july_protests <- july_2020 - july_2019
 #                                         Note 14.
 ## Part 5: Protest Purpose ----
@@ -378,7 +378,7 @@ high_level_table <- table(high_level_purpose)
 #                                         Note 15.
 #     *CONSIDER:* Use View() to examine your `high_level_table` variable. What
 #     picture does this paint of the U.S.?
-
+View(high_level_table)
 #                                         Note 16.
 ## Part 6: Developing data systems ----
 #
@@ -515,5 +515,6 @@ filter_and_report <- function(purpose, position_taken = NULL) {
 #    For example, do your functions have limitations? Or, do they 
 #    work perfectly? If so, how do you know> Do think these two 
 #    functions are useful? What might you do next if you had more time?
+filter_positions("Education", NULL)
 filter_positions("Education", "budget")
 filter_and_report("Education", "budget")
